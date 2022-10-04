@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins";
+    font-style: normal;
+}
+
+$color-back-left: #E2F0FF;
+$color-back-right: #F5F5F5;
+$color-h1: #292731;
+$color-p: #455360;
+$color-input: #ECF2F7;
+$color-input-text: #7B8389;
+$color-btn: #4C70FF;
+$color-white: #FFFFFF;
+$color-link: #83dafa;
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .left-wrapper {
+        background-color: $color-back-left;
+        width: 710px;
+        display: flex;
+        flex-direction: column;
+
+        .img {
+            background-image: url(./assets/1.png);
+            background-repeat: no-repeat;
+            width: 524px;
+            height: 391px;
+            margin-top: 174px;
+            align-self: center;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 26px;
+            width: 400px;
+            text-align: center;
+            align-self: center;
+            margin-top: 56px;
+            color: $color-h1;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            width: 400px;
+            text-align: center;
+            align-self: center;
+            margin-top: 23px;
+            margin-bottom: 224px;
+            color: $color-p;
+        }
+    }
+
+
+    .right-wrapper {
+        background-color: $color-back-right;
+        width: 710px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 135px;
+
+        .icon {
+            background-image: url(./assets/waving-hand.svg);
+            background-repeat: no-repeat;
+            width: 36px;
+            height: 36px;
+            margin-top: 166px;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 30px;
+            margin-top: 13px;
+            color: $color-h1;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 12px;
+            color: $color-h1;
+        }
+
+        .email {
+            margin-top: 62px;
+
+            .block {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 440px;
+
+                p {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: $color-p;
+
+                }
+
+                .vector {
+                    background-image: url(./assets/Vector.svg);
+                    background-repeat: no-repeat;
+                    width: 16px;
+                    height: 16px;
+                    align-items: flex-end;
+                    margin-top: 12px;
+                    margin-right: -5px;
+                }
+
+            }
+
+        }
+
+        .password {
+            p {
+                font-weight: 500;
+                font-size: 16px;
+                margin-top: 30px;
+                color: $color-p;
+            }
+        }
+
+        .input {
+            margin-top: 10px;
+            background-color: $color-input;
+            border: $color-input;
+            border-radius: 4px;
+            width: 420px;
+            font-size: 16px;
+            font-weight: 400px;
+            color: $color-input-text;
+            padding-left: 22px;
+            padding-top: 12px;
+            padding-bottom: 9px;
+        }
+
+        .button {
+            .btn {
+                width: 435px;
+                background-color: $color-btn;
+                border: $color-btn;
+                border-radius: 8px;
+                margin-top: 44px;
+                text-align: center;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                color: $color-white;
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+
+            p {
+                width: 440px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 16px;
+
+                a {
+                    text-decoration: none;
+                    color: $color-link;
+                }
+            }
+        }
+    }
+}
