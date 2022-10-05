@@ -121,7 +121,7 @@
   margin-top: 12px;
   margin-right: -5px;
 }
-.wrapper .right-wrapper .password p {
+.wrapper .right-wrapper .password p, .wrapper .right-wrapper .confirm-psw p {
   font-weight: 500;
   font-size: 16px;
   margin-top: 30px;
