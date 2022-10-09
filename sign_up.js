@@ -5,20 +5,20 @@ const btn = document.querySelector(".button .btn")
 const info = document.querySelector(".email .vector")
 
 function checkEmail(input) {
-    if (!/([a-zA-A.-_0-9]+@[a-z]+\.[a-z]{1,3})|([0-9]{3}[0-9]{2}[0-9]{7})|(\+[0-9]{3}[0-9]{2}[0-9]{7})/g.test(input)) throw new Error("Incorrect format")
+    if (!/([\w\.-]+@[a-z]+\.[a-z]{1,3})|([\d]{3}[\d]{2}[\d]{7})|(\+[\d]{3}[\d]{2}[\d]{7})/g.test(input)) throw new Error("Incorrect format")
     if (!input) throw new Error("Input is empty")
     return true
 }
 
 function checkPassword(input) {
-    if (!/[\wа-яА-Я\-_\/+&$%#!\.\\\/\|]{8,}/g.test(input)) throw new Error("Password must contain at least 8 characters")
+    if (!/[\wа-яА-Я\-\/+&$%#!\.\\\/\|]{8,}/g.test(input)) throw new Error("Password must contain at least 8 characters")
     if (!input) throw new Error("Input is empty")
     return true
 }
 
-function checkConfirmPassword(input1, input2) {
-    if (input1 !== input2) throw new Error("Incorret password")
-    if (!input1) throw new Error("Input is empty")
+function checkConfirmPassword(password, confirmPassword) {
+    if (password !== confirmPassword) throw new Error("Incorret password")
+    if (!password) throw new Error("Input is empty")
 }
 
 email.addEventListener("click", () => {
