@@ -45,7 +45,6 @@ email.addEventListener("click", () => {
 passw.addEventListener("click", () => {
     passw.value = ""
     passw.style = "color: #7B8389"
-
 })
 
 conf_passw.addEventListener("click", () => {
