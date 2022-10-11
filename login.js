@@ -53,6 +53,7 @@ btn.addEventListener("click", () => {
     //     passw.value = error.message
     //     passw.style = "color: red"
     // }
+    
     try {
         checkEmail(email.value)
         checkPassword(passw.value)
