@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+body {
+  background-color: #F5F5F5;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,6 +17,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .wrapper .left-wrapper {
   background-color: #E2F0FF;
@@ -26,7 +34,7 @@
           flex-direction: column;
 }
 .wrapper .left-wrapper .img {
-  background-image: url(./assets/1.png);
+  background-image: url(../assets/1.png);
   background-repeat: no-repeat;
   width: 524px;
   height: 391px;
@@ -71,7 +79,7 @@
   padding-left: 135px;
 }
 .wrapper .right-wrapper .icon {
-  background-image: url(./assets/waving-hand.svg);
+  background-image: url(../assets/waving-hand.svg);
   background-repeat: no-repeat;
   width: 36px;
   height: 36px;
@@ -127,7 +135,7 @@
   color: #455360;
 }
 .wrapper .right-wrapper .email .block .vector {
-  background-image: url(./assets/Vector.svg);
+  background-image: url(../assets/Vector.svg);
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;

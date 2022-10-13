@@ -20,7 +20,6 @@ function checkPassword(password) {
         if (!password) throw new Error("Input is empty")
         passw.style = "color: green"
     } catch (error) {
-        passw.value = error.message
         passw.style = "color: red"
     }
 }
@@ -36,24 +35,7 @@ passw.addEventListener("click", () => {
 
 })
 
-btn.addEventListener("click", () => {
-    // try {
-    //     checkEmail(email.value)
-    //     email.style = "color: green"
-
-    // } catch (error) {
-    //     email.value = error.message
-    //     email.style = "color: red"
-    // }
-    // try {
-    //     checkPassword(passw.value)
-    //     passw.style = "color: green"
-
-    // } catch (error) {
-    //     passw.value = error.message
-    //     passw.style = "color: red"
-    // }
-    
+btn.addEventListener("click", () => {   
     try {
         checkEmail(email.value)
         checkPassword(passw.value)

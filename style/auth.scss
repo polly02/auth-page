@@ -15,9 +15,15 @@ $color-btn: #4C70FF;
 $color-white: #FFFFFF;
 $color-link: #83dafa;
 
+body {
+    background-color: $color-back-right;
+}
+
 .wrapper {
     display: flex;
     flex-direction: row;
+    margin: auto;
+    width: max-content;
 
     .left-wrapper {
         background-color: $color-back-left;
@@ -26,7 +32,7 @@ $color-link: #83dafa;
         flex-direction: column;
 
         .img {
-            background-image: url(./assets/1.png);
+            background-image: url(../assets/1.png);
             background-repeat: no-repeat;
             width: 524px;
             height: 391px;
@@ -65,7 +71,7 @@ $color-link: #83dafa;
         padding-left: 135px;
 
         .icon {
-            background-image: url(./assets/waving-hand.svg);
+            background-image: url(../assets/waving-hand.svg);
             background-repeat: no-repeat;
             width: 36px;
             height: 36px;
@@ -121,7 +127,7 @@ $color-link: #83dafa;
                 }
 
                 .vector {
-                    background-image: url(./assets/Vector.svg);
+                    background-image: url(../assets/Vector.svg);
                     background-repeat: no-repeat;
                     width: 16px;
                     height: 16px;
