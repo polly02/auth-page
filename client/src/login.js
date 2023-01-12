@@ -39,6 +39,9 @@ btn.addEventListener("click", () => {
     try {
         checkEmail(email.value)
         checkPassword(passw.value)
+
+        
+
         alert("You are logged in to the system")
     } catch (error) {
         alert("Try again")

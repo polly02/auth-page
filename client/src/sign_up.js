@@ -29,10 +29,24 @@ function checkPwd(password, confirmPassword) {
     }
 }
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", async () => {
     try {
         checkEmail(email.value)
         checkPwd(conf_passw.value, passw.value)
+
+        const response = await fetch("http://localhost:8000/api/reg", {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email.value,
+                pwd: passw.value
+            })
+        })
+
+        console.log(response);
+
         alert("You are logged in to the system")
     } catch (error) {
         alert("Try again")
