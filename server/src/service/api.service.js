@@ -1,10 +1,23 @@
+const bcrypt = require("bcrypt")
 const { createUserDB, foundUser } = require("../repository/api.repository")
+const saltround = 10
 
 async function createUser(email, pwd) {
     const user = await foundUser(email)
-    if(user,length) throw new Error("такой пользователь есть")
+    if (user.length) throw new Error("такой пользователь есть")
 
-    await createUserDB(email, pwd)
+    const hashedPwd = await bcrypt.hash(pwd, saltround)
+
+    await createUserDB(email, hashedPwd)
 }
 
-module.exports = { createUser }
+async function doAuthorisation(email, pwd) {
+    const user = await foundUser(email)
+    if (!user.length) throw new Error("такого пользователя нет")
+
+    const hashedPwd = userPwd[0].pwd
+
+    if (!(await bcrypt.compare(pwd, hashedPwd))) throw new Error("неверный пароль")
+}
+
+module.exports = { createUser, doAuthorisation }
