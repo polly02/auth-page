@@ -4,7 +4,7 @@ const saltround = 10
 
 async function createUser(email, pwd) {
     const user = await foundUser(email)
-    if (user.length) throw new Error("такой пользователь есть")
+    if (user.length) throw new Error("Такой пользователь есть")
 
     const hashedPwd = await bcrypt.hash(pwd, saltround)
 
@@ -13,11 +13,11 @@ async function createUser(email, pwd) {
 
 async function doAuthorisation(email, pwd) {
     const user = await foundUser(email)
-    if (!user.length) throw new Error("такого пользователя нет")
+    if (!user.length) throw new Error("Такого пользователя нет")
 
     const hashedPwd = userPwd[0].pwd
 
-    if (!(await bcrypt.compare(pwd, hashedPwd))) throw new Error("неверный пароль")
+    if (!(await bcrypt.compare(pwd, hashedPwd))) throw new Error("Неверный пароль")
 }
 
 module.exports = { createUser, doAuthorisation }
